@@ -1,6 +1,7 @@
-# ![veld code](https://raw.githubusercontent.com/veldhub/.github/refs/heads/main/images/symbol_V_letter.png) veld_code__REPLACE
+# ![veld code](https://raw.githubusercontent.com/veldhub/.github/refs/heads/main/images/symbol_V_letter.png) veld_code__flair
 
-This repo contains [code velds](https://zenodo.org/records/13322913) encapsulating REPLACE
+This repo contains [code velds](https://zenodo.org/records/13322913) encapsulating 
+[flair](https://github.com/flairnlp/flair) workflows.
 
 ## requirements
 
@@ -21,11 +22,19 @@ docker compose -f <VELD_NAME>.yaml up
 
 ## contained code velds
 
-**[./veldREPLACE.yaml](./veldREPLACE.yaml)** 
+**[./veld_jupyter_notebook.yaml](./veld_jupyter_notebook.yaml)** 
 
-REPLACE
+For interactive experiments.
 
 ```
-docker compose -f veldREPLACE.yaml up
+docker compose -f veld_jupyter_notebook.yaml up
+```
+
+**[./veld_infer.yaml](./veld_infer.yaml)** 
+
+To infer on data with given models
+
+```
+docker compose -f veld_infer.yaml up
 ```
 

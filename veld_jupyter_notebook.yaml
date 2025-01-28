@@ -24,12 +24,12 @@ x-veld:
         optional:
 
 services:
-  veld:
+  veld_jupyter_notebook:
     build: .
     command: jupyter notebook --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''
     ports:
       - 8888:8888
     volumes:
-      - ./src/jupyter_notebook/:/veld/code/
+      - ./src/jupyter_notebooks/:/veld/code/
     working_dir: /veld/code/
 

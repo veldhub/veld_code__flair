@@ -30,6 +30,6 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ./src/:/veld/code/
+      - ./src/jupyter_notebook/:/veld/code/
     working_dir: /veld/code/
 

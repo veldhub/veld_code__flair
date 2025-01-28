@@ -26,9 +26,10 @@ x-veld:
 services:
   veld:
     build: .
-    command: python /veld/code/REPLACE.py
+    command: jupyter notebook --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+    ports:
+      - 8888:8888
     volumes:
       - ./src/:/veld/code/
-    environment:
-      REPLACE: 
+    working_dir: /veld/code/
 

@@ -26,10 +26,11 @@ x-veld:
 services:
   veld_jupyter_notebook:
     build: .
-    command: jupyter notebook --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''
+    command: bash /veld/code/run.sh train
     ports:
       - 8888:8888
     volumes:
-      - ./src/jupyter_notebooks/:/veld/code/
-    working_dir: /veld/code/
+      - ./src/:/veld/code/
+    environment:
+      run_interactively: true
 

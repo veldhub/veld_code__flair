@@ -1,9 +1,36 @@
+x-veld:
+  code:
+    description:
+    topic:
+    additional:
+
+    input:
+      - volume: /veld/input/
+        file_type:
+        content:
+        environemnt_var:
+
+    output:
+      - volume: /veld/output/
+        file_type:
+        content:
+        environemnt_var:
+
+    config:
+      - environemnt_var:
+        description:
+        var_type:
+        default:
+        optional:
 
 services:
-  veld_infer:
+  veld_jupyter_notebook:
     build: .
-    command: python /veld/code/infer.py
+    command: bash /veld/code/run.sh infer
+    ports:
+      - 8888:8888
     volumes:
-      - ./src/workflows/:/veld/code/
-      - ./data/models_cache/:/veld/input/models_cache/
+      - ./src/:/veld/code/
+    environment:
+      run_interactively: true
 

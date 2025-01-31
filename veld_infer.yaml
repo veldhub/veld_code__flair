@@ -24,13 +24,16 @@ x-veld:
         optional:
 
 services:
-  veld_jupyter_notebook:
+  veld_infer:
     build: .
     command: bash /veld/code/run.sh infer
     ports:
       - 8888:8888
     volumes:
       - ./src/:/veld/code/
+      - ./data/models_cache/:/veld/input/models_cache/
     environment:
       run_interactively: true
+      in_file: ""
+      out_file: ""
 

@@ -24,7 +24,7 @@ x-veld:
         optional:
 
 services:
-  veld_jupyter_notebook:
+  veld_train:
     build: .
     command: bash /veld/code/run.sh train
     ports:

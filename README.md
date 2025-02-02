@@ -5,6 +5,8 @@
 This repo contains [code velds](https://zenodo.org/records/13322913) encapsulating 
 [flair](https://github.com/flairnlp/flair) workflows.
 
+A demo chain veld repo can be found here: https://github.com/veldhub/veld_chain__demo_flair .
+
 ## requirements
 
 - git
